@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [MyBank Test Suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="Android Phone Test(failed)">
+    <classes>
+      <class name="androidPhoneTest.AndroidPhoneMyBank_03">
+        <methods>
+          <include name="afterClass"/>
+          <include name="verifyTransaction_MyBank_03"/>
+          <include name="selectReceiverAndConfirm_MyBank_03"/>
+          <include name="getUserAccount_MyBank_03"/>
+          <include name="configureAppLaunch"/>
+          <include name="viewAccounts_MyBank_03"/>
+          <include name="makeTransaction_MyBank_03"/>
+          <include name="beforeSuite"/>
+          <include name="verifyLaunchMyBankApp_MyBank_03"/>
+        </methods>
+      </class> <!-- androidPhoneTest.AndroidPhoneMyBank_03 -->
+      <class name="androidPhoneTest.AndroidPhoneMyBank_04">
+        <methods>
+          <include name="configureAppLaunch"/>
+          <include name="validateTransaction_MyBank_04"/>
+          <include name="clickSearchButton_MyBank_04"/>
+        </methods>
+      </class> <!-- androidPhoneTest.AndroidPhoneMyBank_04 -->
+      <class name="androidPhoneTest.AndroidPhoneMyBank_02">
+        <methods>
+          <include name="verifyLaunchMyBankApp_MyBank_02"/>
+          <include name="validateAccountEmail_MyBank_02"/>
+          <include name="validateAccountNumber_MyBank_02"/>
+          <include name="validateAccountCurrentBalance_MyBank_02"/>
+          <include name="afterClass"/>
+          <include name="getUserAccount_MyBank_02"/>
+          <include name="validateCustomerName_MyBank_02"/>
+          <include name="configureAppLaunch"/>
+          <include name="viewAccounts_MyBank_02"/>
+          <include name="validateAccountMobileNumber_MyBank_02"/>
+          <include name="beforeSuite"/>
+          <include name="validateAccountIFSCCode_MyBank_02"/>
+        </methods>
+      </class> <!-- androidPhoneTest.AndroidPhoneMyBank_02 -->
+    </classes>
+  </test> <!-- Android Phone Test(failed) -->
+</suite> <!-- Failed suite [MyBank Test Suite] -->
