@@ -1,5 +1,6 @@
 package androidTabletTest;
 
+import java.io.IOException;
 import java.util.List;
 
 import org.openqa.selenium.By;
@@ -23,15 +24,16 @@ public class AndroidTabletMyBankApp extends AndroidTabletBaseClass {
 	ReadDataFromExcel excel = new ReadDataFromExcel();
 
 	@Test(priority = 0)
-	public void verifyLaunchMyBankApp_MyBank_01() {
+	public void verifyLaunchMyBankApp_MyBank_01() throws IOException {
 		try {
 			String expectedTextView = excel.getDataFromExcel(excelPath, sheetName, 1, "HomeTextView");
 			String getTextView = driver.findElement(AppiumBy.className("android.widget.TextView")).getText();
 			Assert.assertEquals(expectedTextView, getTextView);
-			test.log(LogStatus.PASS, "Application title: " + getTextView);
+			generateScreenShots("Application title: " + getTextView, "PASS");
 		} catch (Exception e) {
+			generateScreenShots("Application title didn't match the expected title.", "FAIL");
 			e.printStackTrace();
-			test.log(LogStatus.FAIL, "Application title didn't match the expected title.");
+			Assert.assertTrue(false);
 		}
 	}
 
@@ -42,33 +44,33 @@ public class AndroidTabletMyBankApp extends AndroidTabletBaseClass {
 			Assert.assertTrue(true);
 			test.log(LogStatus.INFO, "Moving to accounts page.");
 		} catch (Exception e) {
+			test.log(LogStatus.FAIL, "Move to accounts page fail.");
 			e.printStackTrace();
 			Assert.assertTrue(false);
-			test.log(LogStatus.FAIL, "View accounts button is not displayed");
 		}
 	}
 
 	@Test(priority = 2)
-	public void validateBankingSystem_MyBank_01() {
+	public void validateBankingSystem_MyBank_01() throws IOException {
 		try {
 			String expectedTextView = excel.getDataFromExcel(excelPath, sheetName, 1, "AccountsTextView");
 			WebElement accountsTitle = driver.findElement(By.xpath(("//*[@text='" + expectedTextView + "']")));
 			if (accountsTitle.isDisplayed()) {
 				Assert.assertTrue(true);
-				test.log(LogStatus.PASS, "Account page title: " + expectedTextView);
+				generateScreenShots("Account page title: " + expectedTextView, "PASS");
 			} else {
 				Assert.assertTrue(false);
-				test.log(LogStatus.FAIL, "Expected title is not displayed");
+				generateScreenShots("Expected title is not displayed", "FAIL");
 			}
 		} catch (Exception e) {
 			e.printStackTrace();
 			Assert.assertTrue(false);
-			test.log(LogStatus.FAIL, "Expected title is not displayed");
+			generateScreenShots("Expected title is not displayed", "FAIL");
 		}
 	}
 
 	@Test(priority = 3)
-	public void countAccounts_MyBank_01() {
+	public void countAccounts_MyBank_01() throws IOException {
 		try {
 			List<WebElement> getAccounts = driver.findElements(AppiumBy.className("android.widget.TextView"));
 			int totalCount = 0;
@@ -79,12 +81,12 @@ public class AndroidTabletMyBankApp extends AndroidTabletBaseClass {
 			}
 			Reporter.log("Total number of visible accounts: " + totalCount);
 			Assert.assertTrue(true);
-			test.log(LogStatus.PASS, "Total number of visible accounts: " + totalCount);
-//			cf.captureFailTestScreenShots();
+			generateScreenShots("Total number of visible accounts: " + totalCount, "PASS");
 		} catch (Exception e) {
 			e.printStackTrace();
 			Assert.assertTrue(false);
 			test.log(LogStatus.FAIL, "Test failed.");
+			generateScreenShots("Test failed.", "FAIL");
 		}
 	}
 
@@ -206,22 +208,24 @@ public class AndroidTabletMyBankApp extends AndroidTabletBaseClass {
 	}
 
 	@Test(priority = 10)
-	public void validateAccountCurrentBalance_MyBank_02() {
+	public void validateAccountCurrentBalance_MyBank_02() throws IOException {
 		try {
 			String accountCurrentBalance = excel.getDataFromExcel(excelPath, sheetName, 1, "Current balance");
 			WebElement customerCurrentBalance = driver
 					.findElement(By.xpath(("//*[@text='" + accountCurrentBalance + "']")));
 			if (customerCurrentBalance.isDisplayed()) {
 				Assert.assertTrue(true);
-				test.log(LogStatus.PASS, "Customer current balance: " + accountCurrentBalance);
+				generateScreenShots("Customer current balance: " + accountCurrentBalance, "PASS");
 			} else {
 				Assert.assertTrue(false);
 				test.log(LogStatus.FAIL, "Customer current balance is not present.");
+				generateScreenShots("Customer current balance is not present.", "FAIL");
 			}
 		} catch (Exception e) {
 			e.printStackTrace();
 			Assert.assertTrue(false);
 			test.log(LogStatus.FAIL, "Test failed.");
+			generateScreenShots("Test failed.", "FAIL");
 		}
 	}
 
@@ -278,22 +282,23 @@ public class AndroidTabletMyBankApp extends AndroidTabletBaseClass {
 	}
 
 	@Test(priority = 14)
-	public void verifyTransaction_MyBank_03() {
+	public void verifyTransaction_MyBank_03() throws IOException {
 		try {
 			String expectedTextView = excel.getDataFromExcel(excelPath, sheetName, 1, "AccountsTextView");
 			WebElement getTextView = driver
 					.findElement(By.xpath("(//android.widget.TextView)[@text='" + expectedTextView + "']"));
 			if (getTextView.isDisplayed()) {
 				Assert.assertTrue(true);
-				test.log(LogStatus.PASS, "Transaction complete.");
+				generateScreenShots("Transaction complete.", "PASS");
 			} else {
 				Assert.assertTrue(false);
 				test.log(LogStatus.FAIL, "Transaction fail.");
+				generateScreenShots("Transaction fail.", "FAIL");
 			}
 		} catch (Exception e) {
 			e.printStackTrace();
 			Assert.assertTrue(false);
-			test.log(LogStatus.FAIL, "Test failed.");
+			generateScreenShots("Transaction fail.", "FAIL");
 		}
 	}
 
@@ -317,7 +322,7 @@ public class AndroidTabletMyBankApp extends AndroidTabletBaseClass {
 	}
 
 	@Test(priority = 16)
-	public void validateTransaction_MyBank_04() {
+	public void validateTransaction_MyBank_04() throws IOException {
 		try {
 			String getSenderName = excel.getDataFromExcel(excelPath, sheetName, 1, "Sender");
 			String getReceiverName = excel.getDataFromExcel(excelPath, sheetName, 1, "Receiver");
@@ -327,15 +332,15 @@ public class AndroidTabletMyBankApp extends AndroidTabletBaseClass {
 					.findElement(By.xpath("(//android.widget.TextView)[@text='" + getReceiverName + "']"));
 			if (getSender.isDisplayed() && getReceiver.isDisplayed()) {
 				Assert.assertTrue(true);
-				test.log(LogStatus.PASS, "Transaction successfully confirmed. Sender is " + getSenderName
-						+ " and Receiver is " + getReceiverName);
+				generateScreenShots("Transaction successfully confirmed. Sender is " + getSenderName
+						+ " and Receiver is " + getReceiverName, "PASS");
 			} else {
 				Assert.assertTrue(false);
-				test.log(LogStatus.FAIL, "Transaction is not present.");
+				generateScreenShots("Transaction is not present.", "FAIL");
 			}
 		} catch (Exception e) {
 			e.printStackTrace();
-			test.log(LogStatus.FAIL, "Test fail.");
+			generateScreenShots("Transaction is not present.", "FAIL");
 		}
 	}
 }

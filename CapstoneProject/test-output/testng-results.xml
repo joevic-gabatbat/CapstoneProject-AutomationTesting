@@ -1,105 +1,137 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="17" passed="17" failed="0" skipped="0">
+<testng-results ignored="0" total="16" passed="15" failed="1" skipped="0">
   <reporter-output>
     <line>
-      <![CDATA[Total number of visible accounts: 10]]>
-    </line>
-    <line>
-      <![CDATA[Receiver is Shebon]]>
+      <![CDATA[Total number of options: 18]]>
     </line>
   </reporter-output>
-  <suite started-at="2023-05-13T13:32:53 PST" name="Default suite" finished-at="2023-05-13T13:33:15 PST" duration-ms="21835">
+  <suite started-at="2023-05-15T15:11:14 PST" name="Default suite" finished-at="2023-05-15T15:12:45 PST" duration-ms="90765">
     <groups>
     </groups>
-    <test started-at="2023-05-13T13:32:53 PST" name="Default test" finished-at="2023-05-13T13:33:15 PST" duration-ms="21835">
-      <class name="androidTabletTest.AndroidTabletMyBankApp">
-        <test-method is-config="true" signature="beforeSuite()[pri:0, instance:androidTabletTest.AndroidTabletMyBankApp@536f2a7e]" started-at="2023-05-13T13:32:53 PST" name="beforeSuite" finished-at="2023-05-13T13:32:53 PST" duration-ms="96" status="PASS">
+    <test started-at="2023-05-15T15:11:14 PST" name="Default test" finished-at="2023-05-15T15:12:45 PST" duration-ms="90765">
+      <class name="iOSPhoneTest.PhoneiOS_UI_Test">
+        <test-method is-config="true" signature="beforeSuite()[pri:0, instance:iOSPhoneTest.PhoneiOS_UI_Test@66982506]" started-at="2023-05-15T15:11:14 PST" name="beforeSuite" finished-at="2023-05-15T15:11:14 PST" duration-ms="77" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeSuite -->
-        <test-method is-config="true" signature="configureAppLaunch()[pri:0, instance:androidTabletTest.AndroidTabletMyBankApp@536f2a7e]" started-at="2023-05-13T13:32:53 PST" name="configureAppLaunch" finished-at="2023-05-13T13:33:01 PST" duration-ms="7625" status="PASS">
+        <test-method is-config="true" signature="configureAppLaunch()[pri:0, instance:iOSPhoneTest.PhoneiOS_UI_Test@66982506]" started-at="2023-05-15T15:11:14 PST" name="configureAppLaunch" finished-at="2023-05-15T15:11:23 PST" duration-ms="8414" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- configureAppLaunch -->
-        <test-method signature="verifyLaunchMyBankApp_MyBank_01()[pri:0, instance:androidTabletTest.AndroidTabletMyBankApp@536f2a7e]" started-at="2023-05-13T13:33:01 PST" name="verifyLaunchMyBankApp_MyBank_01" finished-at="2023-05-13T13:33:01 PST" duration-ms="747" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyLaunchMyBankApp_MyBank_01 -->
-        <test-method signature="viewAccounts_MyBank_01()[pri:1, instance:androidTabletTest.AndroidTabletMyBankApp@536f2a7e]" started-at="2023-05-13T13:33:01 PST" name="viewAccounts_MyBank_01" finished-at="2023-05-13T13:33:01 PST" duration-ms="70" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- viewAccounts_MyBank_01 -->
-        <test-method signature="validateBankingSystem_MyBank_01()[pri:2, instance:androidTabletTest.AndroidTabletMyBankApp@536f2a7e]" started-at="2023-05-13T13:33:01 PST" name="validateBankingSystem_MyBank_01" finished-at="2023-05-13T13:33:03 PST" duration-ms="1652" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- validateBankingSystem_MyBank_01 -->
-        <test-method signature="countAccounts_MyBank_01()[pri:3, instance:androidTabletTest.AndroidTabletMyBankApp@536f2a7e]" started-at="2023-05-13T13:33:03 PST" name="countAccounts_MyBank_01" finished-at="2023-05-13T13:33:04 PST" duration-ms="624" status="PASS">
+        <test-method signature="test_UI_01()[pri:0, instance:iOSPhoneTest.PhoneiOS_UI_Test@66982506]" started-at="2023-05-15T15:11:23 PST" name="test_UI_01" finished-at="2023-05-15T15:11:24 PST" duration-ms="1624" status="PASS">
           <reporter-output>
             <line>
-              <![CDATA[Total number of visible accounts: 10]]>
+              <![CDATA[Total number of options: 18]]>
             </line>
           </reporter-output>
-        </test-method> <!-- countAccounts_MyBank_01 -->
-        <test-method signature="getUserAccount_MyBank_02()[pri:4, instance:androidTabletTest.AndroidTabletMyBankApp@536f2a7e]" started-at="2023-05-13T13:33:04 PST" name="getUserAccount_MyBank_02" finished-at="2023-05-13T13:33:04 PST" duration-ms="163" status="PASS">
+        </test-method> <!-- test_UI_01 -->
+        <test-method signature="test_UI_02()[pri:1, instance:iOSPhoneTest.PhoneiOS_UI_Test@66982506]" started-at="2023-05-15T15:11:24 PST" name="test_UI_02" finished-at="2023-05-15T15:11:26 PST" duration-ms="1106" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- getUserAccount_MyBank_02 -->
-        <test-method signature="validateCustomerName_MyBank_02()[pri:5, instance:androidTabletTest.AndroidTabletMyBankApp@536f2a7e]" started-at="2023-05-13T13:33:04 PST" name="validateCustomerName_MyBank_02" finished-at="2023-05-13T13:33:05 PST" duration-ms="1529" status="PASS">
+        </test-method> <!-- test_UI_02 -->
+        <test-method signature="test_UI_03()[pri:2, instance:iOSPhoneTest.PhoneiOS_UI_Test@66982506]" started-at="2023-05-15T15:11:26 PST" name="test_UI_03" finished-at="2023-05-15T15:11:32 PST" duration-ms="6488" status="FAIL">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [true] but found [false]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [true] but found [false]
+at org.testng.Assert.fail(Assert.java:110)
+at org.testng.Assert.failNotEquals(Assert.java:1577)
+at org.testng.Assert.assertTrue(Assert.java:56)
+at org.testng.Assert.assertTrue(Assert.java:66)
+at iOSPhoneTest.PhoneiOS_UI_Test.test_UI_03(PhoneiOS_UI_Test.java:92)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+at org.testng.TestRunner.privateRun(TestRunner.java:829)
+at org.testng.TestRunner.run(TestRunner.java:602)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:431)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:391)
+at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+at org.testng.TestNG.runSuites(TestNG.java:1099)
+at org.testng.TestNG.run(TestNG.java:1067)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- validateCustomerName_MyBank_02 -->
-        <test-method signature="validateAccountNumber_MyBank_02()[pri:6, instance:androidTabletTest.AndroidTabletMyBankApp@536f2a7e]" started-at="2023-05-13T13:33:05 PST" name="validateAccountNumber_MyBank_02" finished-at="2023-05-13T13:33:05 PST" duration-ms="79" status="PASS">
+        </test-method> <!-- test_UI_03 -->
+        <test-method signature="test_UI_04()[pri:3, instance:iOSPhoneTest.PhoneiOS_UI_Test@66982506]" started-at="2023-05-15T15:11:32 PST" name="test_UI_04" finished-at="2023-05-15T15:11:37 PST" duration-ms="4883" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- validateAccountNumber_MyBank_02 -->
-        <test-method signature="validateAccountEmail_MyBank_02()[pri:7, instance:androidTabletTest.AndroidTabletMyBankApp@536f2a7e]" started-at="2023-05-13T13:33:05 PST" name="validateAccountEmail_MyBank_02" finished-at="2023-05-13T13:33:06 PST" duration-ms="54" status="PASS">
+        </test-method> <!-- test_UI_04 -->
+        <test-method signature="test_UI_05()[pri:4, instance:iOSPhoneTest.PhoneiOS_UI_Test@66982506]" started-at="2023-05-15T15:11:37 PST" name="test_UI_05" finished-at="2023-05-15T15:11:40 PST" duration-ms="2722" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- validateAccountEmail_MyBank_02 -->
-        <test-method signature="validateAccountMobileNumber_MyBank_02()[pri:8, instance:androidTabletTest.AndroidTabletMyBankApp@536f2a7e]" started-at="2023-05-13T13:33:06 PST" name="validateAccountMobileNumber_MyBank_02" finished-at="2023-05-13T13:33:06 PST" duration-ms="48" status="PASS">
+        </test-method> <!-- test_UI_05 -->
+        <test-method signature="test_UI_06()[pri:5, instance:iOSPhoneTest.PhoneiOS_UI_Test@66982506]" started-at="2023-05-15T15:11:40 PST" name="test_UI_06" finished-at="2023-05-15T15:11:42 PST" duration-ms="2791" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- validateAccountMobileNumber_MyBank_02 -->
-        <test-method signature="validateAccountIFSCCode_MyBank_02()[pri:9, instance:androidTabletTest.AndroidTabletMyBankApp@536f2a7e]" started-at="2023-05-13T13:33:06 PST" name="validateAccountIFSCCode_MyBank_02" finished-at="2023-05-13T13:33:06 PST" duration-ms="270" status="PASS">
+        </test-method> <!-- test_UI_06 -->
+        <test-method signature="test_UI_07()[pri:6, instance:iOSPhoneTest.PhoneiOS_UI_Test@66982506]" started-at="2023-05-15T15:11:42 PST" name="test_UI_07" finished-at="2023-05-15T15:11:55 PST" duration-ms="12461" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- validateAccountIFSCCode_MyBank_02 -->
-        <test-method signature="validateAccountCurrentBalance_MyBank_02()[pri:10, instance:androidTabletTest.AndroidTabletMyBankApp@536f2a7e]" started-at="2023-05-13T13:33:06 PST" name="validateAccountCurrentBalance_MyBank_02" finished-at="2023-05-13T13:33:06 PST" duration-ms="199" status="PASS">
+        </test-method> <!-- test_UI_07 -->
+        <test-method signature="test_UI_08()[pri:7, instance:iOSPhoneTest.PhoneiOS_UI_Test@66982506]" started-at="2023-05-15T15:11:55 PST" name="test_UI_08" finished-at="2023-05-15T15:12:03 PST" duration-ms="8271" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- validateAccountCurrentBalance_MyBank_02 -->
-        <test-method signature="getUserAccount_MyBank_03()[pri:11, instance:androidTabletTest.AndroidTabletMyBankApp@536f2a7e]" started-at="2023-05-13T13:33:06 PST" name="getUserAccount_MyBank_03" finished-at="2023-05-13T13:33:08 PST" duration-ms="1946" status="PASS">
+        </test-method> <!-- test_UI_08 -->
+        <test-method signature="test_UI_09()[pri:8, instance:iOSPhoneTest.PhoneiOS_UI_Test@66982506]" started-at="2023-05-15T15:12:03 PST" name="test_UI_09" finished-at="2023-05-15T15:12:08 PST" duration-ms="5206" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- getUserAccount_MyBank_03 -->
-        <test-method signature="makeTransaction_MyBank_03()[pri:12, instance:androidTabletTest.AndroidTabletMyBankApp@536f2a7e]" started-at="2023-05-13T13:33:08 PST" name="makeTransaction_MyBank_03" finished-at="2023-05-13T13:33:11 PST" duration-ms="2611" status="PASS">
+        </test-method> <!-- test_UI_09 -->
+        <test-method signature="test_UI_10()[pri:9, instance:iOSPhoneTest.PhoneiOS_UI_Test@66982506]" started-at="2023-05-15T15:12:08 PST" name="test_UI_10" finished-at="2023-05-15T15:12:18 PST" duration-ms="9321" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- makeTransaction_MyBank_03 -->
-        <test-method signature="selectReceiverAndConfirm_MyBank_03()[pri:13, instance:androidTabletTest.AndroidTabletMyBankApp@536f2a7e]" started-at="2023-05-13T13:33:11 PST" name="selectReceiverAndConfirm_MyBank_03" finished-at="2023-05-13T13:33:12 PST" duration-ms="1354" status="PASS">
-          <reporter-output>
-            <line>
-              <![CDATA[Receiver is Shebon]]>
-            </line>
-          </reporter-output>
-        </test-method> <!-- selectReceiverAndConfirm_MyBank_03 -->
-        <test-method signature="verifyTransaction_MyBank_03()[pri:14, instance:androidTabletTest.AndroidTabletMyBankApp@536f2a7e]" started-at="2023-05-13T13:33:12 PST" name="verifyTransaction_MyBank_03" finished-at="2023-05-13T13:33:13 PST" duration-ms="1261" status="PASS">
+        </test-method> <!-- test_UI_10 -->
+        <test-method signature="test_UI_11()[pri:10, instance:iOSPhoneTest.PhoneiOS_UI_Test@66982506]" started-at="2023-05-15T15:12:18 PST" name="test_UI_11" finished-at="2023-05-15T15:12:21 PST" duration-ms="3657" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyTransaction_MyBank_03 -->
-        <test-method signature="clickSearchButton_MyBank_04()[pri:15, instance:androidTabletTest.AndroidTabletMyBankApp@536f2a7e]" started-at="2023-05-13T13:33:13 PST" name="clickSearchButton_MyBank_04" finished-at="2023-05-13T13:33:13 PST" duration-ms="120" status="PASS">
+        </test-method> <!-- test_UI_11 -->
+        <test-method signature="test_UI_12()[pri:11, instance:iOSPhoneTest.PhoneiOS_UI_Test@66982506]" started-at="2023-05-15T15:12:21 PST" name="test_UI_12" finished-at="2023-05-15T15:12:24 PST" duration-ms="2341" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- clickSearchButton_MyBank_04 -->
-        <test-method signature="validateTransaction_MyBank_04()[pri:16, instance:androidTabletTest.AndroidTabletMyBankApp@536f2a7e]" started-at="2023-05-13T13:33:13 PST" name="validateTransaction_MyBank_04" finished-at="2023-05-13T13:33:15 PST" duration-ms="1414" status="PASS">
+        </test-method> <!-- test_UI_12 -->
+        <test-method signature="test_UI_13()[pri:12, instance:iOSPhoneTest.PhoneiOS_UI_Test@66982506]" started-at="2023-05-15T15:12:24 PST" name="test_UI_13" finished-at="2023-05-15T15:12:31 PST" duration-ms="7347" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- validateTransaction_MyBank_04 -->
-        <test-method is-config="true" signature="afterClass()[pri:0, instance:androidTabletTest.AndroidTabletMyBankApp@536f2a7e]" started-at="2023-05-13T13:33:15 PST" name="afterClass" finished-at="2023-05-13T13:33:15 PST" duration-ms="98" status="PASS">
+        </test-method> <!-- test_UI_13 -->
+        <test-method signature="test_UI_14()[pri:13, instance:iOSPhoneTest.PhoneiOS_UI_Test@66982506]" started-at="2023-05-15T15:12:31 PST" name="test_UI_14" finished-at="2023-05-15T15:12:35 PST" duration-ms="3473" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- afterClass -->
-      </class> <!-- androidTabletTest.AndroidTabletMyBankApp -->
+        </test-method> <!-- test_UI_14 -->
+        <test-method signature="test_UI_15()[pri:14, instance:iOSPhoneTest.PhoneiOS_UI_Test@66982506]" started-at="2023-05-15T15:12:35 PST" name="test_UI_15" finished-at="2023-05-15T15:12:37 PST" duration-ms="2863" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test_UI_15 -->
+        <test-method signature="test_UI_18()[pri:15, instance:iOSPhoneTest.PhoneiOS_UI_Test@66982506]" started-at="2023-05-15T15:12:37 PST" name="test_UI_18" finished-at="2023-05-15T15:12:45 PST" duration-ms="7724" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test_UI_18 -->
+        <test-method is-config="true" signature="afterSuite()[pri:0, instance:iOSPhoneTest.PhoneiOS_UI_Test@66982506]" started-at="2023-05-15T15:12:45 PST" name="afterSuite" finished-at="2023-05-15T15:12:45 PST" duration-ms="96" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterSuite -->
+      </class> <!-- iOSPhoneTest.PhoneiOS_UI_Test -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

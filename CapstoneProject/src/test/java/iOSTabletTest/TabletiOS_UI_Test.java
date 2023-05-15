@@ -1,5 +1,6 @@
 package iOSTabletTest;
 
+import java.io.IOException;
 import java.net.MalformedURLException;
 import java.util.HashMap;
 import java.util.List;
@@ -27,7 +28,7 @@ public class TabletiOS_UI_Test extends TabletiOSBaseClass {
 	ReadDataFromExcel excel = new ReadDataFromExcel();
 
 	@Test(priority = 0, enabled = true)
-	public void test_UI_01() throws MalformedURLException {
+	public void test_UI_01() throws IOException {
 		try {
 			WebElement ele = driver.findElement(AppiumBy.accessibilityId("Web View"));
 			Map<String, Object> params = new HashMap<>();
@@ -37,10 +38,10 @@ public class TabletiOS_UI_Test extends TabletiOSBaseClass {
 			List<WebElement> getOptions = driver.findElements(By.xpath("//XCUIElementTypeCell"));
 			Reporter.log("Total number of options: " + getOptions.size());
 			Assert.assertTrue(true);
-			test.log(LogStatus.PASS, "Total number of options: " + getOptions.size());
+			generateScreenShots("Total number of options: " + getOptions.size(), "PASS");
 		} catch (Exception e) {
 			e.printStackTrace();
-			test.log(LogStatus.FAIL, "Test fail.");
+			generateScreenShots("Test fail.", "FAIL");
 			Assert.assertTrue(false);
 		}
 	}
@@ -80,8 +81,15 @@ public class TabletiOS_UI_Test extends TabletiOSBaseClass {
 			driver.findElements(By.xpath(("//XCUIElementTypePickerWheel"))).get(0).sendKeys(hour);
 			driver.findElements(By.xpath(("//XCUIElementTypePickerWheel"))).get(1).sendKeys(minutes);
 			driver.findElement(By.xpath("//XCUIElementTypeButton[@name='PopoverDismissRegion']")).click();
-			Assert.assertTrue(true);
-			test.log(LogStatus.PASS, "Test successful for Date Picker.");
+			String dateAndTime = driver.findElements(By.xpath("//XCUIElementTypeStaticText")).get(2)
+					.getAttribute("value");
+			if (dateAndTime == "June 18, 2023 at 7:46 PM") {
+				test.log(LogStatus.PASS, "Test successful for Date Picker.");
+				Assert.assertTrue(true);
+			} else {
+				generateScreenShots("Test fail for Date Picker. Actual date and time: " + dateAndTime, "FAIL");
+				Assert.assertTrue(false);
+			}
 		} catch (Exception e) {
 			e.printStackTrace();
 			test.log(LogStatus.FAIL, "Test fail.");
@@ -111,7 +119,7 @@ public class TabletiOS_UI_Test extends TabletiOSBaseClass {
 			indicatorDots.click();
 			indicatorDots.click();
 			Assert.assertTrue(true);
-			test.log(LogStatus.PASS, "Test successful for Page Control.");
+			generateScreenShots("Test successful for Page Control.", "PASS");
 		} catch (Exception e) {
 			e.printStackTrace();
 			test.log(LogStatus.FAIL, "Test fail.");
@@ -127,7 +135,7 @@ public class TabletiOS_UI_Test extends TabletiOSBaseClass {
 			driver.findElement(AppiumBy.accessibilityId("Green color component value")).sendKeys("0");
 			driver.findElement(AppiumBy.accessibilityId("Blue color component value")).sendKeys("0");
 			Assert.assertTrue(true);
-			test.log(LogStatus.PASS, "Test successful for Picker View, changed the color to red.");
+			generateScreenShots("Test successful for Picker View, changed the color to red.", "PASS");
 		} catch (Exception e) {
 			e.printStackTrace();
 			test.log(LogStatus.FAIL, "Test fail.");
@@ -149,7 +157,7 @@ public class TabletiOS_UI_Test extends TabletiOSBaseClass {
 					.findElement(By.xpath("(//XCUIElementTypeProgressIndicator[@name='Progress'])[1]"))
 					.getAttribute("value");
 			Assert.assertEquals(currentProgressIndicator, "100%");
-			test.log(LogStatus.PASS, "Test successful for Progress Views, wait 10 seconds for bar to reach 100%");
+			generateScreenShots("Test successful for Progress Views, wait 10 seconds for bar to reach 100%", "PASS");
 		} catch (Exception e) {
 			e.printStackTrace();
 			test.log(LogStatus.FAIL, "Test fail.");
@@ -173,7 +181,8 @@ public class TabletiOS_UI_Test extends TabletiOSBaseClass {
 			String searchFieldValue = driver.findElement(By.xpath("//XCUIElementTypeSearchField"))
 					.getAttribute("value");
 			Assert.assertEquals(searchFieldValue, "Test");
-			test.log(LogStatus.PASS, "Test successful for Search, current value for search field: " + searchFieldValue);
+			generateScreenShots("Test successful for Search, current value for search field: " + searchFieldValue,
+					"PASS");
 		} catch (Exception e) {
 			e.printStackTrace();
 			test.log(LogStatus.FAIL, "Test fail.");
@@ -213,10 +222,11 @@ public class TabletiOS_UI_Test extends TabletiOSBaseClass {
 			String customSlider = driver.findElements(By.xpath("//XCUIElementTypeSlider")).get(2).getAttribute("value");
 			if (defaultSlider.equals("0%") && tintedSlider.equals("100%") && customSlider.equals("50%")) {
 				Assert.assertTrue(true);
-				test.log(LogStatus.PASS, "Test successful for Sliders, sliders reached the expected percentage.");
+				generateScreenShots("Test successful for Sliders, sliders reached the expected percentage.", "PASS");
+
 			} else {
+				generateScreenShots("Test fail. sliders didn't reached the expected percentage.", "FAIL");
 				Assert.assertTrue(false);
-				test.log(LogStatus.FAIL, "Test fail. sliders didn't reached the expected percentage.");
 			}
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -235,9 +245,10 @@ public class TabletiOS_UI_Test extends TabletiOSBaseClass {
 			if (furtherDetails.isDisplayed()) {
 				driver.findElement(By.xpath("//XCUIElementTypeButton[@name='stepper increment']")).click();
 				Assert.assertTrue(true);
-				test.log(LogStatus.PASS, "Test successful for Stack Views.");
-			}else {
-				test.log(LogStatus.FAIL, "Test fail, Further Details is not displayed.");
+				generateScreenShots("Test successful for Stack Views.", "PASS");
+			} else {
+				generateScreenShots("Test fail, Further Details is not displayed.", "FAIL");
+				Assert.assertTrue(false);
 			}
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -314,10 +325,10 @@ public class TabletiOS_UI_Test extends TabletiOSBaseClass {
 			WebElement textHTML = driver.findElement(AppiumBy.accessibilityId("This is HTML content inside a"));
 			if (textHTML.isDisplayed()) {
 				Assert.assertTrue(true);
-				test.log(LogStatus.PASS, "Test successful for Web View, HTML content is displayed.");
+				generateScreenShots("Test successful for Web View, HTML content is displayed.", "PASS");
 			} else {
+				generateScreenShots("Test fail, HTML content is not displayed.", "FAIL");
 				Assert.assertTrue(false);
-				test.log(LogStatus.FAIL, "Test fail, HTML content is not displayed.");
 			}
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -335,12 +346,12 @@ public class TabletiOS_UI_Test extends TabletiOSBaseClass {
 					.findElement(By.xpath("//XCUIElementTypeStaticText[@name='A Short Title Is Best']"));
 			if (getAlertBoxTitle.isDisplayed()) {
 				driver.findElement(By.xpath("(//XCUIElementTypeOther)[1]")).sendKeys("Test");
+				generateScreenShots("Test successful for Alert Views.", "PASS");
 				driver.findElement(By.xpath("//XCUIElementTypeButton[@name='Cancel']")).click();
 				Assert.assertTrue(true);
-				test.log(LogStatus.PASS, "Test successful for Alert Views.");
 			} else {
+				generateScreenShots("Test fail.", "FAIL");
 				Assert.assertTrue(false);
-				test.log(LogStatus.FAIL, "Test fail.");
 			}
 		} catch (Exception e) {
 			e.printStackTrace();

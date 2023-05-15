@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Default test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>17/0/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>15/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Sat May 13 13:32:53 PST 2023</td>
+<td>Started on:</td><td>Mon May 15 15:11:14 PST 2023</td>
 </tr>
-<tr><td>Total time:</td><td>21 seconds (21835 ms)</td>
+<tr><td>Total time:</td><td>90 seconds (90765 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -67,6 +67,89 @@ function toggleAllBoxes() {
 </tr>
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='iOSPhoneTest.PhoneiOS_UI_Test.test_UI_03()'><b>test_UI_03</b><br>Test class: iOSPhoneTest.PhoneiOS_UI_Test</td>
+<td><div><pre>java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:110)
+	at org.testng.Assert.failNotEquals(Assert.java:1577)
+	at org.testng.Assert.assertTrue(Assert.java:56)
+	at org.testng.Assert.assertTrue(Assert.java:66)
+	at iOSPhoneTest.PhoneiOS_UI_Test.test_UI_03(PhoneiOS_UI_Test.java:92)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+	at org.testng.TestRunner.privateRun(TestRunner.java:829)
+	at org.testng.TestRunner.run(TestRunner.java:602)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:431)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:391)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+	at org.testng.TestNG.runSuites(TestNG.java:1099)
+	at org.testng.TestNG.run(TestNG.java:1067)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1301865499", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1301865499'><pre>java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:110)
+	at org.testng.Assert.failNotEquals(Assert.java:1577)
+	at org.testng.Assert.assertTrue(Assert.java:56)
+	at org.testng.Assert.assertTrue(Assert.java:66)
+	at iOSPhoneTest.PhoneiOS_UI_Test.test_UI_03(PhoneiOS_UI_Test.java:92)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+	at org.testng.TestRunner.privateRun(TestRunner.java:829)
+	at org.testng.TestRunner.run(TestRunner.java:602)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:431)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:391)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+	at org.testng.TestNG.runSuites(TestNG.java:1099)
+	at org.testng.TestNG.run(TestNG.java:1067)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>6</td>
+<td>iOSPhoneTest.PhoneiOS_UI_Test@66982506</td></tr>
+</table><p>
 <table width='100%' border='1' class='invocation-passed'>
 <tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
 <tr><td><b>Test method</b></td>
@@ -76,104 +159,87 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='androidTabletTest.AndroidTabletMyBankApp.validateAccountIFSCCode_MyBank_02()'><b>validateAccountIFSCCode_MyBank_02</b><br>Test class: androidTabletTest.AndroidTabletMyBankApp</td>
+<td title='iOSPhoneTest.PhoneiOS_UI_Test.test_UI_13()'><b>test_UI_13</b><br>Test class: iOSPhoneTest.PhoneiOS_UI_Test</td>
 <td></td>
-<td>0</td>
-<td>androidTabletTest.AndroidTabletMyBankApp@536f2a7e</td></tr>
+<td>7</td>
+<td>iOSPhoneTest.PhoneiOS_UI_Test@66982506</td></tr>
 <tr>
-<td title='androidTabletTest.AndroidTabletMyBankApp.getUserAccount_MyBank_03()'><b>getUserAccount_MyBank_03</b><br>Test class: androidTabletTest.AndroidTabletMyBankApp</td>
+<td title='iOSPhoneTest.PhoneiOS_UI_Test.test_UI_11()'><b>test_UI_11</b><br>Test class: iOSPhoneTest.PhoneiOS_UI_Test</td>
 <td></td>
-<td>1</td>
-<td>androidTabletTest.AndroidTabletMyBankApp@536f2a7e</td></tr>
+<td>3</td>
+<td>iOSPhoneTest.PhoneiOS_UI_Test@66982506</td></tr>
 <tr>
-<td title='androidTabletTest.AndroidTabletMyBankApp.selectReceiverAndConfirm_MyBank_03()'><b>selectReceiverAndConfirm_MyBank_03</b><br>Test class: androidTabletTest.AndroidTabletMyBankApp<br/>
-<a href="#Output-2035225037" onClick='toggleBox("Output-2035225037", this, "Show output", "Hide output");'>Show output</a>
-
-<a href="#Output-2035225037" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-2035225037">
-Receiver is Shebon<br/>
-</div>
-</td>
+<td title='iOSPhoneTest.PhoneiOS_UI_Test.test_UI_09()'><b>test_UI_09</b><br>Test class: iOSPhoneTest.PhoneiOS_UI_Test</td>
 <td></td>
-<td>1</td>
-<td>androidTabletTest.AndroidTabletMyBankApp@536f2a7e</td></tr>
+<td>5</td>
+<td>iOSPhoneTest.PhoneiOS_UI_Test@66982506</td></tr>
 <tr>
-<td title='androidTabletTest.AndroidTabletMyBankApp.validateAccountEmail_MyBank_02()'><b>validateAccountEmail_MyBank_02</b><br>Test class: androidTabletTest.AndroidTabletMyBankApp</td>
+<td title='iOSPhoneTest.PhoneiOS_UI_Test.test_UI_04()'><b>test_UI_04</b><br>Test class: iOSPhoneTest.PhoneiOS_UI_Test</td>
 <td></td>
-<td>0</td>
-<td>androidTabletTest.AndroidTabletMyBankApp@536f2a7e</td></tr>
+<td>4</td>
+<td>iOSPhoneTest.PhoneiOS_UI_Test@66982506</td></tr>
 <tr>
-<td title='androidTabletTest.AndroidTabletMyBankApp.validateAccountCurrentBalance_MyBank_02()'><b>validateAccountCurrentBalance_MyBank_02</b><br>Test class: androidTabletTest.AndroidTabletMyBankApp</td>
-<td></td>
-<td>0</td>
-<td>androidTabletTest.AndroidTabletMyBankApp@536f2a7e</td></tr>
-<tr>
-<td title='androidTabletTest.AndroidTabletMyBankApp.validateTransaction_MyBank_04()'><b>validateTransaction_MyBank_04</b><br>Test class: androidTabletTest.AndroidTabletMyBankApp</td>
-<td></td>
-<td>1</td>
-<td>androidTabletTest.AndroidTabletMyBankApp@536f2a7e</td></tr>
-<tr>
-<td title='androidTabletTest.AndroidTabletMyBankApp.countAccounts_MyBank_01()'><b>countAccounts_MyBank_01</b><br>Test class: androidTabletTest.AndroidTabletMyBankApp<br/>
-<a href="#Output-944757319" onClick='toggleBox("Output-944757319", this, "Show output", "Hide output");'>Show output</a>
-
-<a href="#Output-944757319" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-944757319">
-Total number of visible accounts: 10<br/>
-</div>
-</td>
-<td></td>
-<td>0</td>
-<td>androidTabletTest.AndroidTabletMyBankApp@536f2a7e</td></tr>
-<tr>
-<td title='androidTabletTest.AndroidTabletMyBankApp.validateAccountMobileNumber_MyBank_02()'><b>validateAccountMobileNumber_MyBank_02</b><br>Test class: androidTabletTest.AndroidTabletMyBankApp</td>
-<td></td>
-<td>0</td>
-<td>androidTabletTest.AndroidTabletMyBankApp@536f2a7e</td></tr>
-<tr>
-<td title='androidTabletTest.AndroidTabletMyBankApp.verifyTransaction_MyBank_03()'><b>verifyTransaction_MyBank_03</b><br>Test class: androidTabletTest.AndroidTabletMyBankApp</td>
-<td></td>
-<td>1</td>
-<td>androidTabletTest.AndroidTabletMyBankApp@536f2a7e</td></tr>
-<tr>
-<td title='androidTabletTest.AndroidTabletMyBankApp.verifyLaunchMyBankApp_MyBank_01()'><b>verifyLaunchMyBankApp_MyBank_01</b><br>Test class: androidTabletTest.AndroidTabletMyBankApp</td>
-<td></td>
-<td>0</td>
-<td>androidTabletTest.AndroidTabletMyBankApp@536f2a7e</td></tr>
-<tr>
-<td title='androidTabletTest.AndroidTabletMyBankApp.getUserAccount_MyBank_02()'><b>getUserAccount_MyBank_02</b><br>Test class: androidTabletTest.AndroidTabletMyBankApp</td>
-<td></td>
-<td>0</td>
-<td>androidTabletTest.AndroidTabletMyBankApp@536f2a7e</td></tr>
-<tr>
-<td title='androidTabletTest.AndroidTabletMyBankApp.validateCustomerName_MyBank_02()'><b>validateCustomerName_MyBank_02</b><br>Test class: androidTabletTest.AndroidTabletMyBankApp</td>
-<td></td>
-<td>1</td>
-<td>androidTabletTest.AndroidTabletMyBankApp@536f2a7e</td></tr>
-<tr>
-<td title='androidTabletTest.AndroidTabletMyBankApp.makeTransaction_MyBank_03()'><b>makeTransaction_MyBank_03</b><br>Test class: androidTabletTest.AndroidTabletMyBankApp</td>
+<td title='iOSPhoneTest.PhoneiOS_UI_Test.test_UI_15()'><b>test_UI_15</b><br>Test class: iOSPhoneTest.PhoneiOS_UI_Test</td>
 <td></td>
 <td>2</td>
-<td>androidTabletTest.AndroidTabletMyBankApp@536f2a7e</td></tr>
+<td>iOSPhoneTest.PhoneiOS_UI_Test@66982506</td></tr>
 <tr>
-<td title='androidTabletTest.AndroidTabletMyBankApp.clickSearchButton_MyBank_04()'><b>clickSearchButton_MyBank_04</b><br>Test class: androidTabletTest.AndroidTabletMyBankApp</td>
+<td title='iOSPhoneTest.PhoneiOS_UI_Test.test_UI_06()'><b>test_UI_06</b><br>Test class: iOSPhoneTest.PhoneiOS_UI_Test</td>
 <td></td>
-<td>0</td>
-<td>androidTabletTest.AndroidTabletMyBankApp@536f2a7e</td></tr>
+<td>2</td>
+<td>iOSPhoneTest.PhoneiOS_UI_Test@66982506</td></tr>
 <tr>
-<td title='androidTabletTest.AndroidTabletMyBankApp.validateBankingSystem_MyBank_01()'><b>validateBankingSystem_MyBank_01</b><br>Test class: androidTabletTest.AndroidTabletMyBankApp</td>
+<td title='iOSPhoneTest.PhoneiOS_UI_Test.test_UI_10()'><b>test_UI_10</b><br>Test class: iOSPhoneTest.PhoneiOS_UI_Test</td>
+<td></td>
+<td>9</td>
+<td>iOSPhoneTest.PhoneiOS_UI_Test@66982506</td></tr>
+<tr>
+<td title='iOSPhoneTest.PhoneiOS_UI_Test.test_UI_14()'><b>test_UI_14</b><br>Test class: iOSPhoneTest.PhoneiOS_UI_Test</td>
+<td></td>
+<td>3</td>
+<td>iOSPhoneTest.PhoneiOS_UI_Test@66982506</td></tr>
+<tr>
+<td title='iOSPhoneTest.PhoneiOS_UI_Test.test_UI_08()'><b>test_UI_08</b><br>Test class: iOSPhoneTest.PhoneiOS_UI_Test</td>
+<td></td>
+<td>8</td>
+<td>iOSPhoneTest.PhoneiOS_UI_Test@66982506</td></tr>
+<tr>
+<td title='iOSPhoneTest.PhoneiOS_UI_Test.test_UI_01()'><b>test_UI_01</b><br>Test class: iOSPhoneTest.PhoneiOS_UI_Test<br/>
+<a href="#Output-1294361489" onClick='toggleBox("Output-1294361489", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1294361489" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1294361489">
+Total number of options: 18<br/>
+</div>
+</td>
 <td></td>
 <td>1</td>
-<td>androidTabletTest.AndroidTabletMyBankApp@536f2a7e</td></tr>
+<td>iOSPhoneTest.PhoneiOS_UI_Test@66982506</td></tr>
 <tr>
-<td title='androidTabletTest.AndroidTabletMyBankApp.validateAccountNumber_MyBank_02()'><b>validateAccountNumber_MyBank_02</b><br>Test class: androidTabletTest.AndroidTabletMyBankApp</td>
+<td title='iOSPhoneTest.PhoneiOS_UI_Test.test_UI_12()'><b>test_UI_12</b><br>Test class: iOSPhoneTest.PhoneiOS_UI_Test</td>
 <td></td>
-<td>0</td>
-<td>androidTabletTest.AndroidTabletMyBankApp@536f2a7e</td></tr>
+<td>2</td>
+<td>iOSPhoneTest.PhoneiOS_UI_Test@66982506</td></tr>
 <tr>
-<td title='androidTabletTest.AndroidTabletMyBankApp.viewAccounts_MyBank_01()'><b>viewAccounts_MyBank_01</b><br>Test class: androidTabletTest.AndroidTabletMyBankApp</td>
+<td title='iOSPhoneTest.PhoneiOS_UI_Test.test_UI_18()'><b>test_UI_18</b><br>Test class: iOSPhoneTest.PhoneiOS_UI_Test</td>
 <td></td>
-<td>0</td>
-<td>androidTabletTest.AndroidTabletMyBankApp@536f2a7e</td></tr>
+<td>7</td>
+<td>iOSPhoneTest.PhoneiOS_UI_Test@66982506</td></tr>
+<tr>
+<td title='iOSPhoneTest.PhoneiOS_UI_Test.test_UI_05()'><b>test_UI_05</b><br>Test class: iOSPhoneTest.PhoneiOS_UI_Test</td>
+<td></td>
+<td>2</td>
+<td>iOSPhoneTest.PhoneiOS_UI_Test@66982506</td></tr>
+<tr>
+<td title='iOSPhoneTest.PhoneiOS_UI_Test.test_UI_02()'><b>test_UI_02</b><br>Test class: iOSPhoneTest.PhoneiOS_UI_Test</td>
+<td></td>
+<td>1</td>
+<td>iOSPhoneTest.PhoneiOS_UI_Test@66982506</td></tr>
+<tr>
+<td title='iOSPhoneTest.PhoneiOS_UI_Test.test_UI_07()'><b>test_UI_07</b><br>Test class: iOSPhoneTest.PhoneiOS_UI_Test</td>
+<td></td>
+<td>12</td>
+<td>iOSPhoneTest.PhoneiOS_UI_Test@66982506</td></tr>
 </table><p>
 </body>
 </html>

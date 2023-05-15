@@ -6,9 +6,9 @@
       <class name="iOSPhoneTest.PhoneiOS_UI_Test">
         <methods>
           <include name="configureAppLaunch"/>
-          <include name="test_UI_13"/>
           <include name="beforeSuite"/>
-          <include name="afterClass"/>
+          <include name="test_UI_03"/>
+          <include name="afterSuite"/>
         </methods>
       </class> <!-- iOSPhoneTest.PhoneiOS_UI_Test -->
     </classes>

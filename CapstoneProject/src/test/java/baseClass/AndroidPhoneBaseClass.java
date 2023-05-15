@@ -4,10 +4,15 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.net.URL;
+import java.text.SimpleDateFormat;
 import java.time.Duration;
+import java.util.Date;
 
+import org.apache.commons.io.FileUtils;
 import org.json.simple.parser.ParseException;
 import org.junit.AfterClass;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeSuite;
@@ -40,7 +45,7 @@ public class AndroidPhoneBaseClass {
 	}
 	
 	@AfterSuite
-	public void afterClass() {
+	public void afterSuite() {
 		CommonFunctions.closeExtentReports();
 	}
 
@@ -73,5 +78,19 @@ public class AndroidPhoneBaseClass {
 	public void closeTest() {
 		driver.close();
 		driver.quit();
+	}
+	
+	public void generateScreenShots(String info, String status) throws IOException {
+		String dateName = new SimpleDateFormat("yyyyMMddhhmmss").format(new Date());
+		TakesScreenshot ts = (TakesScreenshot) driver;
+		File source = ts.getScreenshotAs(OutputType.FILE);
+		String destination = System.getProperty("user.dir") + "/AndroidTestScreenshots/" + "ScreenShots" + dateName + ".png";
+		if(status == "PASS") {
+			test.log(LogStatus.PASS, info + test.addScreenCapture(destination));
+		}else {
+			test.log(LogStatus.FAIL, info + test.addScreenCapture(destination));
+		}
+		File finalDestination = new File(destination);
+		FileUtils.copyFile(source, finalDestination);
 	}
 }
