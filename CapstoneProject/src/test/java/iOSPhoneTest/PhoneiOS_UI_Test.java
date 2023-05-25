@@ -27,7 +27,7 @@ public class PhoneiOS_UI_Test extends PhoneiOSBaseClass {
 	String sheetName = "TestData - iOS";
 	ReadDataFromExcel excel = new ReadDataFromExcel();
 
-	@Test(priority = 0, enabled = true)
+	@Test(priority = 0)
 	public void test_UI_01() throws IOException {
 		try {
 			WebElement ele = driver.findElement(AppiumBy.accessibilityId("Web View"));
@@ -46,8 +46,8 @@ public class PhoneiOS_UI_Test extends PhoneiOSBaseClass {
 		}
 	}
 
-	@Test(priority = 1, enabled = true)
-	public void test_UI_02() throws MalformedURLException {
+	@Test(priority = 1)
+	public void test_UI_02() {
 		try {
 			driver.findElement(AppiumBy.accessibilityId("Activity Indicators")).click();
 			WebElement activityIndicatorTitle = driver
@@ -66,12 +66,13 @@ public class PhoneiOS_UI_Test extends PhoneiOSBaseClass {
 		}
 	}
 
-	@Test(priority = 2, enabled = true)
-	public void test_UI_03() throws MalformedURLException {
+	@Test(priority = 2)
+	public void test_UI_03() {
 		try {
 			driver.findElement(AppiumBy.iOSClassChain("**/XCUIElementTypeButton[`label=='UIKitCatalog'`]")).click();
 			driver.findElement(AppiumBy.accessibilityId("Date Picker")).click();
 			driver.findElements(By.xpath("//XCUIElementTypeButton")).get(1).click();
+			driver.findElement(By.xpath("//XCUIElementTypeButton[@name='Next Month']")).click();
 			driver.findElement(By.xpath("//XCUIElementTypeStaticText[@name='18']")).click();
 			driver.findElement(By.xpath("//XCUIElementTypeButton[@name='PopoverDismissRegion']")).click();
 			driver.findElements(By.xpath("//XCUIElementTypeButton")).get(3).click();
@@ -85,7 +86,7 @@ public class PhoneiOS_UI_Test extends PhoneiOSBaseClass {
 			String dateAndTime = driver.findElements(By.xpath("//XCUIElementTypeStaticText")).get(1)
 					.getAttribute("value");
 			if (dateAndTime == "June 18, 2023 at 7:46 PM") {
-				test.log(LogStatus.PASS, "Test successful for Date Picker.");
+				test.log(LogStatus.PASS, "Test successful for Date Picker." + dateAndTime);
 				Assert.assertTrue(true);
 			} else {
 				generateScreenShots("Test fail for Date Picker. Actual date and time: " + dateAndTime, "FAIL");
@@ -98,8 +99,8 @@ public class PhoneiOS_UI_Test extends PhoneiOSBaseClass {
 		}
 	}
 
-	@Test(priority = 3, enabled = true)
-	public void test_UI_04() throws MalformedURLException {
+	@Test(priority = 3)
+	public void test_UI_04() {
 		try {
 			driver.findElement(AppiumBy.iOSClassChain("**/XCUIElementTypeButton[`label=='UIKitCatalog'`]")).click();
 			driver.findElement(AppiumBy.accessibilityId("Image View")).click();
@@ -113,8 +114,8 @@ public class PhoneiOS_UI_Test extends PhoneiOSBaseClass {
 		}
 	}
 
-	@Test(priority = 4, enabled = true)
-	public void test_UI_05() throws MalformedURLException {
+	@Test(priority = 4)
+	public void test_UI_05() {
 		try {
 			driver.findElement(AppiumBy.iOSClassChain("**/XCUIElementTypeButton[`label=='UIKitCatalog'`]")).click();
 			driver.findElement(AppiumBy.accessibilityId("Page Control")).click();
@@ -130,8 +131,8 @@ public class PhoneiOS_UI_Test extends PhoneiOSBaseClass {
 		}
 	}
 
-	@Test(priority = 5, enabled = true)
-	public void test_UI_06() throws MalformedURLException {
+	@Test(priority = 5)
+	public void test_UI_06() {
 		try {
 			driver.findElement(AppiumBy.iOSClassChain("**/XCUIElementTypeButton[`label=='UIKitCatalog'`]")).click();
 			driver.findElement(AppiumBy.accessibilityId("Picker View")).click();
@@ -147,8 +148,8 @@ public class PhoneiOS_UI_Test extends PhoneiOSBaseClass {
 		}
 	}
 
-	@Test(priority = 6, enabled = true)
-	public void test_UI_07() throws MalformedURLException {
+	@Test(priority = 6)
+	public void test_UI_07() {
 		try {
 			driver.findElement(AppiumBy.iOSClassChain("**/XCUIElementTypeButton[`label=='UIKitCatalog'`]")).click();
 			driver.findElement(AppiumBy.accessibilityId("Progress Views")).click();
@@ -170,8 +171,8 @@ public class PhoneiOS_UI_Test extends PhoneiOSBaseClass {
 		}
 	}
 
-	@Test(priority = 7, enabled = true)
-	public void test_UI_08() throws MalformedURLException {
+	@Test(priority = 7)
+	public void test_UI_08() {
 		try {
 			driver.findElement(AppiumBy.iOSClassChain("**/XCUIElementTypeButton[`label=='UIKitCatalog'`]")).click();
 			driver.findElement(AppiumBy.accessibilityId("Search")).click();
@@ -196,8 +197,8 @@ public class PhoneiOS_UI_Test extends PhoneiOSBaseClass {
 		}
 	}
 
-	@Test(priority = 8, enabled = true)
-	public void test_UI_09() throws MalformedURLException {
+	@Test(priority = 8)
+	public void test_UI_09() {
 		try {
 			driver.findElement(By.xpath("//XCUIElementTypeButton[@name='Search']")).click();
 			driver.findElement(AppiumBy.iOSClassChain("**/XCUIElementTypeButton[`label=='UIKitCatalog'`]")).click();
@@ -214,8 +215,8 @@ public class PhoneiOS_UI_Test extends PhoneiOSBaseClass {
 		}
 	}
 
-	@Test(priority = 9, enabled = true)
-	public void test_UI_10() throws MalformedURLException {
+	@Test(priority = 9)
+	public void test_UI_10() {
 		try {
 			driver.findElement(AppiumBy.iOSClassChain("**/XCUIElementTypeButton[`label=='UIKitCatalog'`]")).click();
 			driver.findElement(AppiumBy.accessibilityId("Sliders")).click();
@@ -245,8 +246,8 @@ public class PhoneiOS_UI_Test extends PhoneiOSBaseClass {
 		}
 	}
 
-	@Test(priority = 10, enabled = true)
-	public void test_UI_11() throws MalformedURLException {
+	@Test(priority = 10)
+	public void test_UI_11() {
 		try {
 			driver.findElement(AppiumBy.iOSClassChain("**/XCUIElementTypeButton[`label=='UIKitCatalog'`]")).click();
 			driver.findElement(AppiumBy.accessibilityId("Stack Views")).click();
@@ -268,8 +269,8 @@ public class PhoneiOS_UI_Test extends PhoneiOSBaseClass {
 		}
 	}
 
-	@Test(priority = 11, enabled = true)
-	public void test_UI_12() throws MalformedURLException {
+	@Test(priority = 11)
+	public void test_UI_12() {
 		try {
 			driver.findElement(AppiumBy.iOSClassChain("**/XCUIElementTypeButton[`label=='UIKitCatalog'`]")).click();
 			driver.findElement(AppiumBy.accessibilityId("Switches")).click();
@@ -283,8 +284,8 @@ public class PhoneiOS_UI_Test extends PhoneiOSBaseClass {
 		}
 	}
 
-	@Test(priority = 12, enabled = true)
-	public void test_UI_13() throws MalformedURLException {
+	@Test(priority = 12)
+	public void test_UI_13() {
 		try {
 			driver.findElement(AppiumBy.iOSClassChain("**/XCUIElementTypeButton[`label=='UIKitCatalog'`]")).click();
 			driver.findElement(AppiumBy.accessibilityId("Text Fields")).click();
@@ -309,8 +310,8 @@ public class PhoneiOS_UI_Test extends PhoneiOSBaseClass {
 		}
 	}
 
-	@Test(priority = 13, enabled = true)
-	public void test_UI_14() throws MalformedURLException {
+	@Test(priority = 13)
+	public void test_UI_14() {
 		try {
 			driver.findElement(AppiumBy.iOSClassChain("**/XCUIElementTypeButton[`label=='UIKitCatalog'`]")).click();
 			driver.findElement(AppiumBy.accessibilityId("Toolbars")).click();
@@ -325,8 +326,8 @@ public class PhoneiOS_UI_Test extends PhoneiOSBaseClass {
 		}
 	}
 
-	@Test(priority = 14, enabled = true)
-	public void test_UI_15() throws MalformedURLException {
+	@Test(priority = 14)
+	public void test_UI_15() {
 		try {
 			driver.findElement(AppiumBy.iOSClassChain("**/XCUIElementTypeButton[`label == 'Toolbars'`]")).click();
 			driver.findElement(AppiumBy.iOSClassChain("**/XCUIElementTypeButton[`label=='UIKitCatalog'`]")).click();
@@ -351,8 +352,8 @@ public class PhoneiOS_UI_Test extends PhoneiOSBaseClass {
 		}
 	}
 
-	@Test(priority = 15, enabled = true)
-	public void test_UI_18() throws MalformedURLException {
+	@Test(priority = 15)
+	public void test_UI_18() {
 		try {
 			driver.findElement(AppiumBy.iOSClassChain("**/XCUIElementTypeButton[`label=='UIKitCatalog'`]")).click();
 			driver.findElement(AppiumBy.accessibilityId("Alert Views")).click();

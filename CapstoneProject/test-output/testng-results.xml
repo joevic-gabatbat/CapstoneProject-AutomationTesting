@@ -5,31 +5,31 @@
       <![CDATA[Total number of options: 18]]>
     </line>
   </reporter-output>
-  <suite started-at="2023-05-15T15:11:14 PST" name="Default suite" finished-at="2023-05-15T15:12:45 PST" duration-ms="90765">
+  <suite started-at="2023-05-17T17:00:40 PST" name="Default suite" finished-at="2023-05-17T17:02:19 PST" duration-ms="99759">
     <groups>
     </groups>
-    <test started-at="2023-05-15T15:11:14 PST" name="Default test" finished-at="2023-05-15T15:12:45 PST" duration-ms="90765">
-      <class name="iOSPhoneTest.PhoneiOS_UI_Test">
-        <test-method is-config="true" signature="beforeSuite()[pri:0, instance:iOSPhoneTest.PhoneiOS_UI_Test@66982506]" started-at="2023-05-15T15:11:14 PST" name="beforeSuite" finished-at="2023-05-15T15:11:14 PST" duration-ms="77" status="PASS">
+    <test started-at="2023-05-17T17:00:40 PST" name="Default test" finished-at="2023-05-17T17:02:19 PST" duration-ms="99759">
+      <class name="iOSTabletTest.TabletiOS_UI_Test">
+        <test-method is-config="true" signature="beforeSuite()[pri:0, instance:iOSTabletTest.TabletiOS_UI_Test@66982506]" started-at="2023-05-17T17:00:40 PST" name="beforeSuite" finished-at="2023-05-17T17:00:40 PST" duration-ms="105" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeSuite -->
-        <test-method is-config="true" signature="configureAppLaunch()[pri:0, instance:iOSPhoneTest.PhoneiOS_UI_Test@66982506]" started-at="2023-05-15T15:11:14 PST" name="configureAppLaunch" finished-at="2023-05-15T15:11:23 PST" duration-ms="8414" status="PASS">
+        <test-method is-config="true" signature="configureAppLaunch()[pri:0, instance:iOSTabletTest.TabletiOS_UI_Test@66982506]" started-at="2023-05-17T17:00:40 PST" name="configureAppLaunch" finished-at="2023-05-17T17:00:54 PST" duration-ms="14124" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- configureAppLaunch -->
-        <test-method signature="test_UI_01()[pri:0, instance:iOSPhoneTest.PhoneiOS_UI_Test@66982506]" started-at="2023-05-15T15:11:23 PST" name="test_UI_01" finished-at="2023-05-15T15:11:24 PST" duration-ms="1624" status="PASS">
+        <test-method signature="test_UI_01()[pri:0, instance:iOSTabletTest.TabletiOS_UI_Test@66982506]" started-at="2023-05-17T17:00:54 PST" name="test_UI_01" finished-at="2023-05-17T17:00:55 PST" duration-ms="1582" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[Total number of options: 18]]>
             </line>
           </reporter-output>
         </test-method> <!-- test_UI_01 -->
-        <test-method signature="test_UI_02()[pri:1, instance:iOSPhoneTest.PhoneiOS_UI_Test@66982506]" started-at="2023-05-15T15:11:24 PST" name="test_UI_02" finished-at="2023-05-15T15:11:26 PST" duration-ms="1106" status="PASS">
+        <test-method signature="test_UI_02()[pri:1, instance:iOSTabletTest.TabletiOS_UI_Test@66982506]" started-at="2023-05-17T17:00:55 PST" name="test_UI_02" finished-at="2023-05-17T17:00:57 PST" duration-ms="1180" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- test_UI_02 -->
-        <test-method signature="test_UI_03()[pri:2, instance:iOSPhoneTest.PhoneiOS_UI_Test@66982506]" started-at="2023-05-15T15:11:26 PST" name="test_UI_03" finished-at="2023-05-15T15:11:32 PST" duration-ms="6488" status="FAIL">
+        <test-method signature="test_UI_03()[pri:2, instance:iOSTabletTest.TabletiOS_UI_Test@66982506]" started-at="2023-05-17T17:00:57 PST" name="test_UI_03" finished-at="2023-05-17T17:01:08 PST" duration-ms="11496" status="FAIL">
           <exception class="java.lang.AssertionError">
             <message>
               <![CDATA[expected [true] but found [false]]]>
@@ -40,7 +40,7 @@ at org.testng.Assert.fail(Assert.java:110)
 at org.testng.Assert.failNotEquals(Assert.java:1577)
 at org.testng.Assert.assertTrue(Assert.java:56)
 at org.testng.Assert.assertTrue(Assert.java:66)
-at iOSPhoneTest.PhoneiOS_UI_Test.test_UI_03(PhoneiOS_UI_Test.java:92)
+at iOSTabletTest.TabletiOS_UI_Test.test_UI_03(TabletiOS_UI_Test.java:92)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -75,63 +75,63 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- test_UI_03 -->
-        <test-method signature="test_UI_04()[pri:3, instance:iOSPhoneTest.PhoneiOS_UI_Test@66982506]" started-at="2023-05-15T15:11:32 PST" name="test_UI_04" finished-at="2023-05-15T15:11:37 PST" duration-ms="4883" status="PASS">
+        <test-method signature="test_UI_04()[pri:3, instance:iOSTabletTest.TabletiOS_UI_Test@66982506]" started-at="2023-05-17T17:01:08 PST" name="test_UI_04" finished-at="2023-05-17T17:01:12 PST" duration-ms="3564" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- test_UI_04 -->
-        <test-method signature="test_UI_05()[pri:4, instance:iOSPhoneTest.PhoneiOS_UI_Test@66982506]" started-at="2023-05-15T15:11:37 PST" name="test_UI_05" finished-at="2023-05-15T15:11:40 PST" duration-ms="2722" status="PASS">
+        <test-method signature="test_UI_05()[pri:4, instance:iOSTabletTest.TabletiOS_UI_Test@66982506]" started-at="2023-05-17T17:01:12 PST" name="test_UI_05" finished-at="2023-05-17T17:01:13 PST" duration-ms="1693" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- test_UI_05 -->
-        <test-method signature="test_UI_06()[pri:5, instance:iOSPhoneTest.PhoneiOS_UI_Test@66982506]" started-at="2023-05-15T15:11:40 PST" name="test_UI_06" finished-at="2023-05-15T15:11:42 PST" duration-ms="2791" status="PASS">
+        <test-method signature="test_UI_06()[pri:5, instance:iOSTabletTest.TabletiOS_UI_Test@66982506]" started-at="2023-05-17T17:01:13 PST" name="test_UI_06" finished-at="2023-05-17T17:01:17 PST" duration-ms="3397" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- test_UI_06 -->
-        <test-method signature="test_UI_07()[pri:6, instance:iOSPhoneTest.PhoneiOS_UI_Test@66982506]" started-at="2023-05-15T15:11:42 PST" name="test_UI_07" finished-at="2023-05-15T15:11:55 PST" duration-ms="12461" status="PASS">
+        <test-method signature="test_UI_07()[pri:6, instance:iOSTabletTest.TabletiOS_UI_Test@66982506]" started-at="2023-05-17T17:01:17 PST" name="test_UI_07" finished-at="2023-05-17T17:01:29 PST" duration-ms="12576" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- test_UI_07 -->
-        <test-method signature="test_UI_08()[pri:7, instance:iOSPhoneTest.PhoneiOS_UI_Test@66982506]" started-at="2023-05-15T15:11:55 PST" name="test_UI_08" finished-at="2023-05-15T15:12:03 PST" duration-ms="8271" status="PASS">
+        <test-method signature="test_UI_08()[pri:7, instance:iOSTabletTest.TabletiOS_UI_Test@66982506]" started-at="2023-05-17T17:01:29 PST" name="test_UI_08" finished-at="2023-05-17T17:01:37 PST" duration-ms="8149" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- test_UI_08 -->
-        <test-method signature="test_UI_09()[pri:8, instance:iOSPhoneTest.PhoneiOS_UI_Test@66982506]" started-at="2023-05-15T15:12:03 PST" name="test_UI_09" finished-at="2023-05-15T15:12:08 PST" duration-ms="5206" status="PASS">
+        <test-method signature="test_UI_09()[pri:8, instance:iOSTabletTest.TabletiOS_UI_Test@66982506]" started-at="2023-05-17T17:01:37 PST" name="test_UI_09" finished-at="2023-05-17T17:01:43 PST" duration-ms="5074" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- test_UI_09 -->
-        <test-method signature="test_UI_10()[pri:9, instance:iOSPhoneTest.PhoneiOS_UI_Test@66982506]" started-at="2023-05-15T15:12:08 PST" name="test_UI_10" finished-at="2023-05-15T15:12:18 PST" duration-ms="9321" status="PASS">
+        <test-method signature="test_UI_10()[pri:9, instance:iOSTabletTest.TabletiOS_UI_Test@66982506]" started-at="2023-05-17T17:01:43 PST" name="test_UI_10" finished-at="2023-05-17T17:01:53 PST" duration-ms="10338" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- test_UI_10 -->
-        <test-method signature="test_UI_11()[pri:10, instance:iOSPhoneTest.PhoneiOS_UI_Test@66982506]" started-at="2023-05-15T15:12:18 PST" name="test_UI_11" finished-at="2023-05-15T15:12:21 PST" duration-ms="3657" status="PASS">
+        <test-method signature="test_UI_11()[pri:10, instance:iOSTabletTest.TabletiOS_UI_Test@66982506]" started-at="2023-05-17T17:01:53 PST" name="test_UI_11" finished-at="2023-05-17T17:01:57 PST" duration-ms="3767" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- test_UI_11 -->
-        <test-method signature="test_UI_12()[pri:11, instance:iOSPhoneTest.PhoneiOS_UI_Test@66982506]" started-at="2023-05-15T15:12:21 PST" name="test_UI_12" finished-at="2023-05-15T15:12:24 PST" duration-ms="2341" status="PASS">
+        <test-method signature="test_UI_12()[pri:11, instance:iOSTabletTest.TabletiOS_UI_Test@66982506]" started-at="2023-05-17T17:01:57 PST" name="test_UI_12" finished-at="2023-05-17T17:01:58 PST" duration-ms="1270" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- test_UI_12 -->
-        <test-method signature="test_UI_13()[pri:12, instance:iOSPhoneTest.PhoneiOS_UI_Test@66982506]" started-at="2023-05-15T15:12:24 PST" name="test_UI_13" finished-at="2023-05-15T15:12:31 PST" duration-ms="7347" status="PASS">
+        <test-method signature="test_UI_13()[pri:12, instance:iOSTabletTest.TabletiOS_UI_Test@66982506]" started-at="2023-05-17T17:01:58 PST" name="test_UI_13" finished-at="2023-05-17T17:02:06 PST" duration-ms="7806" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- test_UI_13 -->
-        <test-method signature="test_UI_14()[pri:13, instance:iOSPhoneTest.PhoneiOS_UI_Test@66982506]" started-at="2023-05-15T15:12:31 PST" name="test_UI_14" finished-at="2023-05-15T15:12:35 PST" duration-ms="3473" status="PASS">
+        <test-method signature="test_UI_14()[pri:13, instance:iOSTabletTest.TabletiOS_UI_Test@66982506]" started-at="2023-05-17T17:02:06 PST" name="test_UI_14" finished-at="2023-05-17T17:02:08 PST" duration-ms="2731" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- test_UI_14 -->
-        <test-method signature="test_UI_15()[pri:14, instance:iOSPhoneTest.PhoneiOS_UI_Test@66982506]" started-at="2023-05-15T15:12:35 PST" name="test_UI_15" finished-at="2023-05-15T15:12:37 PST" duration-ms="2863" status="PASS">
+        <test-method signature="test_UI_15()[pri:14, instance:iOSTabletTest.TabletiOS_UI_Test@66982506]" started-at="2023-05-17T17:02:08 PST" name="test_UI_15" finished-at="2023-05-17T17:02:11 PST" duration-ms="2811" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- test_UI_15 -->
-        <test-method signature="test_UI_18()[pri:15, instance:iOSPhoneTest.PhoneiOS_UI_Test@66982506]" started-at="2023-05-15T15:12:37 PST" name="test_UI_18" finished-at="2023-05-15T15:12:45 PST" duration-ms="7724" status="PASS">
+        <test-method signature="test_UI_18()[pri:15, instance:iOSTabletTest.TabletiOS_UI_Test@66982506]" started-at="2023-05-17T17:02:11 PST" name="test_UI_18" finished-at="2023-05-17T17:02:19 PST" duration-ms="8155" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- test_UI_18 -->
-        <test-method is-config="true" signature="afterSuite()[pri:0, instance:iOSPhoneTest.PhoneiOS_UI_Test@66982506]" started-at="2023-05-15T15:12:45 PST" name="afterSuite" finished-at="2023-05-15T15:12:45 PST" duration-ms="96" status="PASS">
+        <test-method is-config="true" signature="afterSuite()[pri:0, instance:iOSTabletTest.TabletiOS_UI_Test@66982506]" started-at="2023-05-17T17:02:19 PST" name="afterSuite" finished-at="2023-05-17T17:02:20 PST" duration-ms="106" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterSuite -->
-      </class> <!-- iOSPhoneTest.PhoneiOS_UI_Test -->
+      </class> <!-- iOSTabletTest.TabletiOS_UI_Test -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

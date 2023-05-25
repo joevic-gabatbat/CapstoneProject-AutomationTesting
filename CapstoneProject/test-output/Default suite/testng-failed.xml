@@ -3,14 +3,14 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="iOSPhoneTest.PhoneiOS_UI_Test">
+      <class name="iOSTabletTest.TabletiOS_UI_Test">
         <methods>
           <include name="configureAppLaunch"/>
-          <include name="beforeSuite"/>
-          <include name="test_UI_03"/>
           <include name="afterSuite"/>
+          <include name="test_UI_03"/>
+          <include name="beforeSuite"/>
         </methods>
-      </class> <!-- iOSPhoneTest.PhoneiOS_UI_Test -->
+      </class> <!-- iOSTabletTest.TabletiOS_UI_Test -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
